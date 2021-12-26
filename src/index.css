@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Mulish", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+:root {
+	--brand: #573bff;
+	--swatch_1: #06141d;
+	--swatch_2: #1b2730;
+	--swatch_3: #28343e;
+	--swatch_light_1: #f5fdff;
+	--text: #e5edef;
+	--text-dark: #3a4750;
+	--sub: #62707d;
+
+	/* Colors */
+	--danger: #ff4b54;
+	--warning: #ff8f00;
+	--success: #33d69f;
+
+	/* Utils */
+	--simple-boxshadow: 0 0 10px 0px rgb(0 0 0 / 30%);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--brand);
+}
+
+*::-webkit-scrollbar-track {
+	background-color: #444;
+}
+
+*::-webkit-scrollbar {
+	width: 9px;
+}
+
+*:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+input {
+	font-family: "Mulish", sans-serif;
+	letter-spacing: 1px;
+}
+
+/* Layout */
+.main-wrapper {
+	position: relative;
+	height: calc(100vh - 50px);
+	width: calc(100vw - 50px);
+	background-color: var(--swatch_1);
+	color: var(--text);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 25px;
+}
+
+.grid {
+	display: grid;
+	grid-column-gap: 25px;
+	grid-row-gap: 25px;
+}
+
+._2-3-2 {
+	grid-template-columns: 2fr 3fr 2fr;
+}
+
+/* Navbar */
+.navbar {
+	padding-bottom: 25px;
+}
+
+.navbar input.explore {
+	background: var(--swatch_2);
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.navbar .home-btn {
+	display: flex;
+	align-items: center;
+	background: var(--swatch_light_1);
+	width: fit-content;
+	padding: 10px;
+	border-radius: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+}
+
+.navbar .home-btn .material-icons {
+	margin-right: 5px;
+	color: var(--brand);
+}
+
+.navbar .home-btn p {
+	color: var(--text-dark);
+	font-weight: 700;
+}
+
+.navbar .nav-icons {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.navbar .nav-icons>.material-icons {
+	margin-right: 15px;
+}
+
+.navbar .user-btn {
+	display: flex;
+	align-items: center;
+	background: var(--swatch_2);
+	padding: 5px;
+	border-radius: 50px;
+}
+
+.navbar .user-btn img {
+	height: 34px;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.navbar .user-btn p {
+	margin-right: 10px;
+}
+
+/* Cards */
+.card {
+	padding: 15px;
+	background: var(--swatch_2);
+	border-radius: 10px;
+	margin-bottom: 25px;
+}
+
+.card .default-header {
+	margin-bottom: 15px;
+}
+
+/* Suggested User */
+.card .suggested-user {
+	display: flex;
+}
+
+.card .suggested-user img {
+	height: 34px;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.card .suggested-user .user .username {
+	color: var(--sub);
+}
+
+.card .suggested-user .follow-btn {
+	background: var(--swatch_light_1);
+	padding: 10px 15px;
+	border-radius: 50px;
+	font-weight: 700;
+	margin-left: auto;
+	color: var(--text-dark);
+	cursor: pointer;
+	font-size: 14px;
+}
